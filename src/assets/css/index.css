@@ -1,0 +1,238 @@
+/* ******************************************************************
+ * 	title:
+ *		・コンテンツ一覧画面のCSS定義ファイル
+ *		
+ *	overView:
+ *		・コンテンツ一覧画面のデザイン定義を記載する
+ * 
+ * ******************************************************************/
+
+ /* -----------------------------------------------------------------
+  * 画面全体のデザイン
+  * ----------------------------------------------------------------- */
+  body {
+	overflow: hidden;
+}
+
+.baseContainer {
+	display: flex;
+	height:100%;
+}
+
+ /* -----------------------------------------------------------------
+  * アコーディオンメニューのデザイン
+  * ----------------------------------------------------------------- */
+
+.menuContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height:100%;
+	width: 33%;
+}
+
+a {
+	text-decoration: none;
+}
+
+#homeMenu, #toolboxMenu {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.acordion {
+	background-color: #545454;
+	height:94%;
+	padding: 40px;
+	color: #F0F0F0;
+	text-align: left;
+	text-decoration: underline;
+}
+
+ /* -----------------------------------------------------------------
+  * アコーディオンメニュー下のfooterデザイン
+  * ----------------------------------------------------------------- */
+
+.footer {
+	height:12%;
+	color: #545454;
+	text-align: left;
+}
+
+ /* -----------------------------------------------------------------
+  * バナーのデザイン
+  * ----------------------------------------------------------------- */
+
+.topBanner {
+	position: relative;
+	width: 100%;
+	color: #2F3131;
+	height: 20vw;
+}
+
+.mainImage {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.logoImage {
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	width: 30%;
+	height: 7vw;
+}
+
+ /* -----------------------------------------------------------------
+  * メニュー選択時の制御
+  * ----------------------------------------------------------------- */
+
+.ul {
+	font: menu;
+	font-size: 24px;
+	padding:10px;
+	margin:5px;
+}
+
+.ul.closed {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	transition: padding 1.0s ease, margin 1.0s ease;
+}
+
+.ul:hover {
+	background: rgba(0,0,0,0.2);
+	box-shadow: inset 0 -1px rgba(0,0,0,0);
+	box-shadow: #ffffff;
+	cursor: pointer;
+}
+
+.ul li {
+	list-style: none;
+	position: relative;
+	margin-left:10px;
+}
+
+.ul li a {
+	width: 100%;
+}
+
+.ul li ul {
+	margin-top:5px;
+	margin-left:25px;
+	margin-right:10px;
+}
+
+.ul li li {
+	height: 0;
+	overflow: hidden;
+	transition: 1s;
+}
+
+.ul li:hover > ul > li {
+	height: 2.2rem;
+	overflow: visible;
+}
+
+ /* -----------------------------------------------------------------
+  * タイルリストのデザイン
+  * ----------------------------------------------------------------- */
+
+.contentsTitleHypen {
+	font-size: 22px;
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.contentsTitle {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	padding-left: 40px;
+	width: 100%;
+	min-height: 12%;
+	text-align: left;
+	font-size: 20px;
+	color: #2F3131;
+}
+
+.contentsContainer {
+	display: flex;
+	width: 100%;
+	height: 20vw; 
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.contentsList {
+	width: 100%;
+	height: 65vh; 
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.innerContentsList {
+	overflow-y: auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-bottom: 100px;
+	padding-left: 20px;
+}
+
+ /* -----------------------------------------------------------------
+  * タイルのデザイン＆タイル選択時の制御
+  * ----------------------------------------------------------------- */
+
+.card {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 20%;
+	min-height:350px;
+	height: 20vw;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 20px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.card-img {
+	background-position: top left;
+	background-size: auto;
+	overflow: hidden;
+	height: 160px;
+}
+
+.card-body {
+	padding: 15px;
+	background-color: #fff;
+	transition: transform 0.3s ease-in-out;
+}
+
+.card-title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #808080;
+	text-align: left;
+	white-space: normal;
+	line-height: 1.2; 
+	max-height: 40px;
+	overflow: hidden;
+	word-wrap: break-word; /* 追加 */
+}
+
+.card-text {
+	color: #808080;
+	height: 170px;
+	text-align: left;
+}
+
+.card.focused .card-body {
+	background-color: #fff;
+	transform: translateY(-170px);
+	transition: transform 0.6s ease;
+}

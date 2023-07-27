@@ -1,0 +1,96 @@
+/* ******************************************************************
+ * 	title:
+ *		・コンテンツ説明画面のCSS定義ファイル
+ *		
+ *	overView:
+ *		・コンテンツ説明画面のデザイン定義を記載する
+ * 
+ * ******************************************************************/
+
+ /* -----------------------------------------------------------------
+  * 画面全体のデザイン
+  * ----------------------------------------------------------------- */
+  
+html, body {
+	overflow-y: hidden;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+.actionBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000; 
+}
+
+.body-container {
+	margin-top: 50px;
+	height: calc(100vh - 50px); 
+	width: 100%;
+	overflow-y: auto;
+}
+
+ /* -----------------------------------------------------------------
+  * タイトルや説明文言の装飾
+  * ----------------------------------------------------------------- */
+
+h1:before {
+	content: "|";
+	color: red;
+	font-size: 1.5em;
+	margin-right: 10px;
+	margin-left: -10px;
+}
+
+a:after {
+	content: "\A\A";
+	white-space: pre;
+}
+
+.explain {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	box-sizing: border-box;
+	box-shadow: 1px 3px 7px rgba(0,0,0,0.1);
+	border-radius: 5px;
+	background: #f5f5f5;
+	text-align: left;
+	color: #545454;
+	padding: 25px;
+	padding-top:20px;
+	padding-bottom:10px;
+	margin: 0 auto;
+	margin-top:40px; 
+	margin-bottom:5px;
+}
+
+.wording {
+	width: 90%;
+	height: 100%;
+	padding: 25px;
+	margin-bottom: 10px;
+}
+
+.contents {
+	width: 85%;
+	background: #DCDDDD;
+	border-radius: 20px;
+	padding: 50px;
+	padding-bottom: 10px;
+	margin: 20px;
+	margin-bottom: 50px;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	color: #545454;
+	margin: 0 auto;
+	margin-bottom:15px;
+}

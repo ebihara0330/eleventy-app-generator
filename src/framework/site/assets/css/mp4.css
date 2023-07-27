@@ -1,0 +1,52 @@
+/* ******************************************************************
+ * 	title:
+ *		・コンテンツ閲覧画面（mp4）のCSS定義ファイル
+ *		
+ *	overView:
+ *		・コンテンツ閲覧画面（mp4）のデザイン定義を記載する
+ * 
+ * ******************************************************************/
+
+ /* -----------------------------------------------------------------
+  * 画面全体のデザイン
+  * ----------------------------------------------------------------- */
+
+  body, html {
+	height: 100%;
+}
+
+.body-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: black;
+}
+
+.actionBar {
+	display: flex;
+	justify-content: flex-start;
+	background-color: #ff0000;
+	width: 100%;
+	height: 50px;
+}
+
+ /* -----------------------------------------------------------------
+  * mp4ビューワのデザイン
+  * ----------------------------------------------------------------- */
+
+.video-container {
+	margin-top:10px;
+	margin-bottom:10px;
+	position: relative;
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow: hidden;
+}
+
+.video-container video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
